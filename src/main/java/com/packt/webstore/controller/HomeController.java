@@ -14,4 +14,12 @@ public class HomeController {
 
         return "welcome";
     }
+
+    @RequestMapping("/foo")
+    public String foo(Model model) {
+        model.addAttribute("greeting", "this is another page !");
+        model.addAttribute("tagline", "Yet another webpage");
+
+        return "welcome";
+    }
 }
